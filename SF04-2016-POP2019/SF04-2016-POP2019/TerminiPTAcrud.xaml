@@ -1,0 +1,32 @@
+﻿<Window x:Class="SF04_2016_POP2019.TerminiPTAcrud"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SF04_2016_POP2019"
+        mc:Ignorable="d"
+        Title="TerminiPTAcrud" Height="483.645" Width="367.601">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FFA8FFAC"/>
+            <GradientStop Color="#FF9AEB9E" Offset="0.457"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+
+        <Button Content="OK" Click="btnOk_Click" HorizontalAlignment="Left" Height="30" Margin="39,383,0,0" VerticalAlignment="Top" Width="112" Background="#FF57E02F"/>
+        <Button Content="CANCEL" Click="btnCancel_Click" HorizontalAlignment="Left" Height="30" Margin="213,383,0,0" VerticalAlignment="Top" Width="112" Background="#FFE62323"/>
+        <Label Content="Termin od:" HorizontalAlignment="Left" Height="34" Margin="46,50,0,0" VerticalAlignment="Top" Width="118"/>
+        <Label Content="Termin do:" HorizontalAlignment="Left" Height="32" Margin="46,101,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label Content="Dan" HorizontalAlignment="Left" Height="32" Margin="46,148,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label Content="Tip nastave:" HorizontalAlignment="Left" Height="32" Margin="46,198,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.076,1.25"/>
+        <TextBox x:Name="txtVreme2" Text="{Binding Path=Vreme2}" HorizontalAlignment="Left" Height="32" Margin="169,101,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148"/>
+        <TextBox x:Name="txtVreme1" HorizontalAlignment="Left" Height="32" Margin="169,50,0,0" TextWrapping="Wrap" Text="{Binding Path=Vreme1}" VerticalAlignment="Top" Width="148"/>
+        <ListBox x:Name="lbClassrooms" HorizontalAlignment="Left" Height="113" Margin="169,248,0,0" VerticalAlignment="Top" Width="148"/>
+        <ComboBox x:Name="cmbDan" SelectedItem="{Binding Path=DayOfWeek}" HorizontalAlignment="Left" Height="32" Margin="169,148,0,0" VerticalAlignment="Top" Width="156"/>
+        <ComboBox x:Name="cmbTip" SelectedItem="{Binding Path=TipNastave}" HorizontalAlignment="Left" Height="32" Margin="169,198,0,0" VerticalAlignment="Top" Width="156"/>
+        <Label Content="Ucionice:" HorizontalAlignment="Left" Height="25" Margin="46,291,0,0" VerticalAlignment="Top" Width="80"/>
+
+    </Grid>
+</Window>

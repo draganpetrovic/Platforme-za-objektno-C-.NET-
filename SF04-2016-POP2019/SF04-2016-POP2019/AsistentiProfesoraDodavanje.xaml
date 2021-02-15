@@ -1,0 +1,22 @@
+﻿<Window x:Class="SF04_2016_POP2019.AsistentiProfesoraDodavanje"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SF04_2016_POP2019"
+        mc:Ignorable="d"
+        Title="AsistentiProfesoraDodavanje" Height="450" Width="506.918">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FFA8FFAC"/>
+            <GradientStop Color="#FF9AEB9E" Offset="0.457"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <DataGrid AutoGeneratingColumn="dgAsistenti_AutoGeneratingColumn" x:Name="dgAsistenti" HorizontalAlignment="Left" Height="305" VerticalAlignment="Top" Width="453" Margin="24,28,0,0"/>
+        <Button Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="118,352,0,0" Height="34" Click="ButtonOk_Click" Background="#FF65DC2D"/>
+        <Button Content="CANCEL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98" Margin="297,352,0,0" Height="34" Click="ButtonCancel_Click" Background="#FFE21D1D"/>
+
+    </Grid>
+</Window>

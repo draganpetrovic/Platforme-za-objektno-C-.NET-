@@ -1,0 +1,38 @@
+﻿<Window x:Class="SF04_2016_POP2019.ClassroomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SF04_2016_POP2019"
+        mc:Ignorable="d"
+        Title="ClassroomWindow" Height="487.059" Width="926">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FFA8FFAC"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="dgClassroom" AutoGeneratingColumn="dgClassroom_AutoGeneratingColumn" HorizontalAlignment="Left" Height="355" Margin="28,44,0,0" VerticalAlignment="Top" Width="664" Grid.Column="1" ColumnWidth="*" />
+        <Button x:Name="btnAdd" Click="btnAdd_Click" Content="ADD" HorizontalAlignment="Left" Height="27" Margin="52,419,0,0" VerticalAlignment="Top" Width="103" Background="#FF4ECB59" FontWeight="Bold"/>
+        <Button x:Name="btnDelete" Click="btnDelete_Click" Content="DELETE" HorizontalAlignment="Left" Height="27" Margin="201,419,0,0" VerticalAlignment="Top" Width="103" Background="#FFD83737" FontWeight="Bold"/>
+        <Button x:Name="btnEdit" Click="btnEdit_Click" Content="EDIT" HorizontalAlignment="Left" Height="27" Margin="346,419,0,0" VerticalAlignment="Top" Width="103" Background="#FF35AFD3" FontWeight="Bold"/>
+        <Label Content="Search by:" HorizontalAlignment="Left" Height="26" Margin="697,44,0,0" VerticalAlignment="Top" Width="71" FontWeight="Bold"/>
+        <Label Content="Name" HorizontalAlignment="Left" Height="26" Margin="697,91,0,0" VerticalAlignment="Top" Width="71" FontWeight="Bold"/>
+        <Label Content="Seats" HorizontalAlignment="Left" Height="26" Margin="697,128,0,0" VerticalAlignment="Top" Width="71" FontWeight="Bold"/>
+        <Label Content="Type" HorizontalAlignment="Left" Height="26" Margin="697,168,0,0" VerticalAlignment="Top" Width="71" FontWeight="Bold"/>
+        <Label Content="Faculty" HorizontalAlignment="Left" Height="26" Margin="697,204,0,0" VerticalAlignment="Top" Width="71" FontWeight="Bold"/>
+        <TextBox x:Name="txtSearchName" HorizontalAlignment="Left" Height="26" Margin="773,91,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115"/>
+        <TextBox x:Name="txtSearchSeats" HorizontalAlignment="Left" Height="26" Margin="773,128,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115"/>
+        <TextBox x:Name="txtSearchFaculty" HorizontalAlignment="Left" Height="26" Margin="773,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115"/>
+        <Button Click="btnSearch_Click" Content="Search" HorizontalAlignment="Left" Height="27" Margin="773,372,0,0" VerticalAlignment="Top" Width="115" Background="#FF82B1BF" FontWeight="Bold"/>
+        <ComboBox x:Name="cmbTypeOfClassroom" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Margin="773,168,0,0" Height="26"/>
+        <Label Content="Sort by" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,13,0,0"/>
+        <RadioButton Checked="rbName_Checked" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,21,0,0"/>
+        <RadioButton Checked="rbSeats_Checked" Content="Seats" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="201,21,0,0"/>
+        <RadioButton Checked="rbType_Checked" Content="Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="276,21,0,0"/>
+        <RadioButton Checked="rbFaculty_Checked" Content="Faculty" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="346,21,0,0"/>
+
+
+    </Grid>
+</Window>

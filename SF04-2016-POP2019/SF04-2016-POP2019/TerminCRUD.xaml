@@ -1,0 +1,36 @@
+﻿<Window x:Class="SF04_2016_POP2019.TerminCRUD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SF04_2016_POP2019"
+        mc:Ignorable="d"
+        Title="TerminCRUD" Height="376.121" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FFA8FFAC"/>
+            <GradientStop Color="#FF9AEB9E" Offset="0.457"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="0,0,0,7" RenderTransformOrigin="0.505,0.493">
+
+        <Button Content="OK" Click="btnOk_Click" HorizontalAlignment="Left" Height="30" Margin="39,286,0,0" VerticalAlignment="Top" Width="112" Background="#FF2ED31E"/>
+        <Button Content="CANCEL" Click="btnCancel_Click" HorizontalAlignment="Left" Height="30" Margin="213,286,0,0" VerticalAlignment="Top" Width="112" Background="#FFEE2D2D"/>
+        <Label Content="Termin od:" HorizontalAlignment="Left" Height="34" Margin="46,50,0,0" VerticalAlignment="Top" Width="118"/>
+        <Label Content="Termin do:" HorizontalAlignment="Left" Height="32" Margin="46,101,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label Content="Dan" HorizontalAlignment="Left" Height="32" Margin="46,148,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label Content="Tip nastave:" HorizontalAlignment="Left" Height="32" Margin="46,198,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.076,1.25"/>
+        <TextBox x:Name="txtVreme2" Text="{Binding Path=Vreme2}" HorizontalAlignment="Left" Height="32" Margin="169,101,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148"/>
+        <TextBox x:Name="txtVreme1" HorizontalAlignment="Left" Height="32" Margin="169,50,0,0" TextWrapping="Wrap" Text="{Binding Path=Vreme1}" VerticalAlignment="Top" Width="148"/>
+        <ComboBox x:Name="cmbDan" SelectedItem="{Binding Path=DayOfWeek}" HorizontalAlignment="Left" Height="32" Margin="169,148,0,0" VerticalAlignment="Top" Width="156"/>
+        <ComboBox x:Name="cmbTip" SelectedItem="{Binding Path=TipNastave}" HorizontalAlignment="Left" Height="32" Margin="169,198,0,0" VerticalAlignment="Top" Width="156"/>
+        <Label Content="Izaberi fakultet:" HorizontalAlignment="Left" Height="35" Margin="366,10,0,0" VerticalAlignment="Top" Width="148"/>
+        <DataGrid x:Name="dgFaculty" AutoGeneratingColumn="dgFaculty_AutoGeneratingColumn" HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="368" Margin="366,50,0,0" ColumnWidth="*" MouseDoubleClick="DgFaculty_MouseDoubleClick" />
+        <ListBox x:Name="lbClassrooms" HorizontalAlignment="Left" Height="135" Margin="366,178,0,0" VerticalAlignment="Top" Width="148"/>
+        <ListBox x:Name="lbPTA" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="173" Margin="561,178,0,0"/>
+        <Label Content="Profesori i Asistenti" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="561,147,0,0"/>
+        <Label Content="Ucionice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="366,148,0,0"/>
+
+    </Grid>
+</Window>

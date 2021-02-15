@@ -1,0 +1,32 @@
+﻿<Window x:Class="SF04_2016_POP2019.FacultyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SF04_2016_POP2019"
+        mc:Ignorable="d"
+        Title="FacultyWindow" Height="417.656" Width="729.25">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FFA8FFAC"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <DataGrid x:Name="dgFaculty" AutoGeneratingColumn="dgFaculty_AutoGeneratingColumn" HorizontalAlignment="Left" Height="266" Margin="39,33,0,0" VerticalAlignment="Top" Width="480" Grid.Column="1" ColumnWidth="*" />
+        <Button x:Name="btnAdd" Click="btnAdd_Click" Content="ADD" HorizontalAlignment="Left" Height="35" Margin="44,326,0,0" VerticalAlignment="Top" Width="97" Background="#FF56D44F" FontWeight="Bold"/>
+        <Button x:Name="btnDelete" Click="btnDelete_Click" Content="DELETE" HorizontalAlignment="Left" Height="35" Margin="171,326,0,0" VerticalAlignment="Top" Width="97" Background="#FFE63636" FontWeight="Bold"/>
+        <Button x:Name="btnEdit" Click="btnEdit_Click" Content="EDIT" HorizontalAlignment="Left" Height="35" Margin="294,326,0,0" VerticalAlignment="Top" Width="97" Background="#FF6AB0EA" FontWeight="Bold"/>
+        <Label Content="Name" HorizontalAlignment="Left" Height="27" Margin="524,72,0,0" VerticalAlignment="Top" Width="50" FontWeight="Bold" RenderTransformOrigin="0.433,1.168"/>
+        <Label Content="Address" HorizontalAlignment="Left" Height="27" Margin="524,124,0,0" VerticalAlignment="Top" Width="63" FontWeight="Bold"/>
+        <Label Content="Search by:" HorizontalAlignment="Left" Margin="524,32,0,0" VerticalAlignment="Top" Width="73" FontWeight="Bold"/>
+        <Button x:Name="btnSearch" Click="btnSearch_Click" Content="Search" HorizontalAlignment="Left" Margin="587,279,0,0" VerticalAlignment="Top" Width="124" Background="#FFABD0EE" FontWeight="Bold"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="26" Margin="587,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="26" Margin="587,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
+        <Button x:Name="btnRaspored" Click="btnRaspored_Click" Content="RASPORED" HorizontalAlignment="Left" Margin="419,326,0,0" VerticalAlignment="Top" Width="91" Height="35" FontWeight="Bold"/>
+        <Label Content="Sort by" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="44,5,0,0"/>
+        <RadioButton Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="114,13,0,0" Checked="rbName_Checked"/>
+        <RadioButton Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,13,0,0" Checked="rbAddress_Checked" />
+
+    </Grid>
+</Window>
